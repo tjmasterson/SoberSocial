@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
 
   has_many :event_guest_lists
   has_many :events, through: :event_guest_lists
-  has_many :events
+  has_many :created_events, class_name: "Event", foreign_key: :user_id
+
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
