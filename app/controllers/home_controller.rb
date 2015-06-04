@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
-  before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
   def index
-    @event = Event.first
+    @events = Event.all
   end
 
 end
