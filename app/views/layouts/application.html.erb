@@ -47,8 +47,14 @@
       </div><!-- /.container -->
     </nav><!-- /.navbar -->
   </div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+  <% flash.each do |key, value| %>
+    <div class="message">
+       <div class="alert-message <%= key %> fade in">
+        <center class="alert alert-success"><strong><%= value %></strong></center>
+      </div>
+    </div>
+  <% end %>
 
   <%= yield %>
 
