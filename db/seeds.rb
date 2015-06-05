@@ -17,7 +17,9 @@ taylor.created_events.create(title: "Coffee", description: "Lets get coffee!!", 
 
 taylor.created_events.create(title: "Charity Event", description: "Blah is hosting a charity event", address: "953 W Belmont Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 100, num_people_attending: 45, category_id: 8)
 
-chase.created_events.create(title: "Pizza", description: "Pizza is just the best", address: "3033 N Ashland Ave Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 2, num_people_attending: 1, category_id: 7)
+chase.created_events.create(title: "Sushi", description: "Sushi is just the best", address: "4033 N Ashland Ave Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 2, num_people_attending: 1, category_id: 7)
+
+chase.created_events.create(title: "Pizza", description: "Pizza is just the best", address: "3033 S Western Ave Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 2, num_people_attending: 2, category_id: 7)
 
 chase.created_events.create(title: "Dev Bootcamp", description: "Learn HTML for beginners", address: "2207 N Clybourn Ave Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 8, num_people_attending: 5, category_id: 6)
 

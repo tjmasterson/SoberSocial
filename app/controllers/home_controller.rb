@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @ip = request.remote_ip
     @location = Geokit::Geocoders::MultiGeocoder.geocode("184.154.83.119")
     puts ">>>>>>>>>>>>>>>>>>#{@location.ll}"
-    @events = Event.within(4, :origin => @location.ll)
+    @events = Event.within(15, :origin => @location.ll)
     @locations = []
     @events.each do |event|
       @locations << [event.lat, event.lng, event.title]
