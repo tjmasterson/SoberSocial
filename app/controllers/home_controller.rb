@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   def index
     @ip = request.remote_ip
     @user_location = Geokit::Geocoders::MultiGeocoder.geocode("184.154.83.119")
-    @events = Event.within(15, :origin => @user_location.ll)
+    @events = Event.within(3, :origin => @user_location.ll)
     @locations = []
     @events.each { |event| @locations << [event.lat, event.lng, event.title] }
   end
