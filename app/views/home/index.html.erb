@@ -1,4 +1,5 @@
-<p><%= @location.ll %></p>
+<div id="map-canvas" data-locations="<%= @locations %>" data-latitude="<%= @location.latitude %>" data-longitude="<%= @location.longitude %>"></div>
+<p><%= "user lat/lng: #{@location.ll}" %></p><hr><hr>
 <%= @events.each do |event| %>
 <p><%= event.title %></p><hr>
 <p><%= event.lat %></p>
@@ -7,7 +8,6 @@
 
 
 
-<div id="map-canvas" data-address="<%= @event.address %>" data-latitude="<%= @location.latitude %>" data-longitude="<%= @location.longitude %>"></div>
 
 <div class="row">
   <div class="col-md-3 col-sm-12 col-xs-12">
