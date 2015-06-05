@@ -1,23 +1,16 @@
-$(function() {
-    $('#easypiechart-teal').easyPieChart({
-        scaleColor: false,
-        barColor: '#1ebfae'
-    });
-});
+// $(function() {
+//     $('#easypiechart-teal').easyPieChart({
+//         scaleColor: false,
+//         barColor: '#1ebfae'
+//     });
+// });
 
-$(function() {
-    $('#easypiechart-orange').easyPieChart({
-        scaleColor: false,
-        barColor: '#ffb53e'
-    });
-});
-
-$(function() {
-    $('#easypiechart-red').easyPieChart({
-        scaleColor: false,
-        barColor: '#f9243f'
-    });
-});
+// $(function() {
+//     $('#easypiechart-orange').easyPieChart({
+//         scaleColor: false,
+//         barColor: '#ffb53e'
+//     });
+// });
 
 $(function() {
    $('#easypiechart-blue').easyPieChart({
@@ -25,6 +18,20 @@ $(function() {
        barColor: '#30a5ff'
    });
 });
+
+// $('#easypiechart-blue').each(function() {
+//     $('#easypiechart-blue').easyPieChart({
+//         scaleColor: false,
+//         barColor: '#f9243f'
+//     });
+// });
+// $(function() {
+//     $('#easypiechart-red').easyPieChart({
+//         scaleColor: false,
+//         barColor: '#f9243f'
+//     });
+// });
+
 
 /**!
  * easyPieChart

@@ -2,21 +2,23 @@
 <p><%= "user lat/lng coords: #{@user_location.ll}" %></p>
 
 <div class="row">
-  <div class="col-md-3 col-sm-12 col-xs-12">
+<div class="col-md-3 col-sm-12 col-xs-12">
 
 <!-- event div -->
 <% @events.each do |event| %>
+
     <div class="panel panel-primary text-center no-border bg-color-red red">
       <div class="panel-left pull-left red">
           <i class="fa fa-users fa-5x"></i>
       </div>
       <div class="panel-right pull-right">
-        <h4><%= event.num_people_attending %>/<%= event.max_people %></h4>
-        <strong><%= event.title %></strong>
+        <h3><%= event.title %></h3>
+        <div class="easypiechart" id="easypiechart-blue" data-percent=<%= event.num_people_attending %>/<%= event.max_people %> ><span class="percent"><%= event.num_people_attending %>/<%= event.max_people %></span>
+        </div>
       </div>
     </div>
 <% end %>
 <!-- event div -->
-
   </div>
 </div>
+
