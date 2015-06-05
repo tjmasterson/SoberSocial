@@ -6,6 +6,7 @@ class CreateEvents < ActiveRecord::Migration
       t.string     :address
       t.datetime   :start_time
       t.integer    :max_people
+      t.integer    :num_peopel_attending
       t.references :user
       t.references :category
 

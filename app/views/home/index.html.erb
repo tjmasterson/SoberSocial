@@ -1,2 +1,3 @@
-<div id="map-canvas" data-address="<%= @event.address %>"></div>
-
+<h1><%= image_tag current_user.image%></h1>
+<h2><%= @ip.class %></h2>
+<div id="map-canvas" data-address="<%= @event.address %>" data-location="<%= @location.ll %>"></div>
