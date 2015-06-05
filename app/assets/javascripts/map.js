@@ -59,7 +59,7 @@ $(document).ready(function(){
   function buildMap(latitude, longitude, locations){
     var myLatlng = new google.maps.LatLng(latitude, longitude);
     var mapOptions = {
-      zoom: 10,
+      zoom: 11,
       center: myLatlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false
@@ -84,7 +84,7 @@ $(document).ready(function(){
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         console.log("hello");
         return function() {
-          infowindow.setContent("LINK GOES HERE?");
+          infowindow.setContent(locations[i][2]);
           infowindow.open(map, marker);
         }
       })(marker, i));

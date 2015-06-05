@@ -1,35 +1,22 @@
 <div id="map-canvas" data-locations="<%= @locations %>" data-latitude="<%= @location.latitude %>" data-longitude="<%= @location.longitude %>"></div>
-<p><%= "user lat/lng: #{@location.ll}" %></p><hr><hr>
-<%= @events.each do |event| %>
-<p><%= event.title %></p><hr>
-<p><%= event.lat %></p>
-<p><%= event.lng %></p><hr>
-<% end %>
-
-
-
+<p><%= "user lat/lng: #{@location.ll}" %></p>
 
 <div class="row">
   <div class="col-md-3 col-sm-12 col-xs-12">
-    <div class="panel panel-primary text-center no-boder bg-color-green green">
+
+<!-- event div -->
+<% @events.each do |event| %>
+    <div class="panel panel-primary text-center no-border bg-color-green green">
       <div class="panel-left pull-left green">
           <i class="fa fa-users fa-5x"></i>
       </div>
       <div class="panel-right pull-right">
-        <h3>8,457</h3>
-        <strong> Daily Visits</strong>
+        <h3><%= event.num_people_attending %>/<%= event.max_people %></h3>
+        <strong><%= event.title %></strong>
       </div>
     </div>
+<% end %>
+<!-- event div -->
+
   </div>
 </div>
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-    <div class="panel panel-default">
-      <div class="panel-body easypiechart-panel">
-        <h4>Customers</h4>
-        <div class="easypiechart" id="easypiechart-blue" data-percent="82" ><span class="percent">82%</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!--/.row -->

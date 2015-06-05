@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @events = Event.within(4, :origin => @location.ll)
     @locations = []
     @events.each do |event|
-      @locations << [event.lat, event.lng]
+      @locations << [event.lat, event.lng, event.title]
     end
     @event = Event.first
   end
