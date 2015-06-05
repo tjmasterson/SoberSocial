@@ -38,6 +38,8 @@ gem 'omniauth-facebook'
 # Awesome font for some styling
 gem "font-awesome-rails"
 
+gem 'geokit'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
