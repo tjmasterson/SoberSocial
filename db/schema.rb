@@ -34,6 +34,8 @@ ActiveRecord::Schema.define(version: 20150604175250) do
     t.string   "description"
     t.string   "address"
     t.datetime "start_time"
+    t.float    "lat"
+    t.float    "lng"
     t.integer  "max_people"
     t.integer  "num_peopel_attending"
     t.integer  "user_id"
