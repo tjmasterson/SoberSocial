@@ -35,6 +35,11 @@ gem 'omniauth-facebook'
 # Use Thin as the app server
  gem 'thin'
 
+# Awesome font for some styling
+gem "font-awesome-rails"
+
+gem 'geokit-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
