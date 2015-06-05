@@ -4,8 +4,7 @@ $(document).ready(function(){
     var mapCanvas = $("#map-canvas");
     var latitude = mapCanvas.data("latitude");
     var longitude = mapCanvas.data("longitude");
-    var geocoder = new google.maps.Geocoder();
-    var locations = mapCanvas.data("locations")
+    var locations = mapCanvas.data("locations");
 
     buildMap(latitude, longitude, locations);
   }//init
@@ -26,10 +25,9 @@ $(document).ready(function(){
     });
 
     var infowindow = new google.maps.InfoWindow();
-    var i, marker;
-    for (i = 0; i < locations.length; i++) {
+    for (var i = 0; i < locations.length; i++) {
       var position = new google.maps.LatLng(locations[i][0], locations[i][1]);
-      marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
         position: position,
         map: map
       });
@@ -41,7 +39,6 @@ $(document).ready(function(){
         }
       })(marker, i));
     }
-
   }//buildMap
   google.maps.event.addDomListener(window, 'load', initialize);
 })//$doc.ready
