@@ -9,6 +9,5 @@ class HomeController < ApplicationController
                                           event.description, event.max_people,
                                           event.num_people_attending] }
   end
-
 end
 

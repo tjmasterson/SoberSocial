@@ -21,7 +21,7 @@ $(document).ready(function(){
     var marker = new google.maps.InfoWindow({
       position: myLatlng,
       map: map,
-      content: "USER(hardcoded for development)"
+      content: "USER"
     });
 
     var infowindow = new google.maps.InfoWindow();
