@@ -12,7 +12,7 @@ $(document).ready(function(){
   function buildMap(latitude, longitude, locations){
     var myLatlng = new google.maps.LatLng(latitude, longitude);
     var mapOptions = {
-      zoom: 11,
+      zoom: 16,
       center: myLatlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false
@@ -34,7 +34,12 @@ $(document).ready(function(){
 
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-          infowindow.setContent(locations[i][2]);
+          infowindow.setContent('<div class="jumbotron">' +
+                                  '<h2>' +locations[i][2]+ '</h2>' +
+                                  '<h4> # of guests: ' +locations[i][5]+ '/' +locations[i][4]+ '</h4>' +
+                                    '<p>' +locations[i][3]+ '</p>' +
+                                    '<p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p>' +
+                                '</div>');
           infowindow.open(map, marker);
         }
       })(marker, i));
@@ -42,3 +47,14 @@ $(document).ready(function(){
   }//buildMap
   google.maps.event.addDomListener(window, 'load', initialize);
 })//$doc.ready
+
+
+
+
+
+
+
+
+
+
+
