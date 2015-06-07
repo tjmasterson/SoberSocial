@@ -7,7 +7,7 @@ class HomeController < ApplicationController
     @locations = []
     @events.each { |event| @locations << [event.lat, event.lng, event.title,
                                           event.description, event.max_people,
-                                          event.num_people_attending] }
+                                          event.num_people_attending, event.address] }
   end
 end
 

@@ -1,6 +1,18 @@
 #map-canvas{
-  height: 60em;
+  height: 40em;
   width: 97%;
   margin-right: auto;
   margin-left: auto;
+}
+
+.jumbotron h3{
+  color: #bebebebe;
+}
+
+.jumbotron h4{
+  color: #bebebebe;
+}
+
+.jumbotron h4 span{
+  color: #bebebe;
 }
