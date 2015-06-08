@@ -1,25 +1,19 @@
 <div id="map-canvas" data-locations="<%= @locations %>" data-latitude="<%= @user_location.latitude %>" data-longitude="<%= @user_location.longitude %>"></div>
 <p><%= "user lat/lng coords: #{@user_location.ll}" %></p>
-
+<div class="col-sm-12">
+  <button type="button" class="btn btn-success col-sm-4" id="create-event-button">Create Event</button>
+</div>
 <div class="row">
   <% @events.each do |event| %>
   <div class="col-md-3 col-sm-12 col-xs-12">
-    <div class="panel panel-primary text-center no-border bg-color-red red">
-      <div class="panel-left pull-left red">
-          <%= image_tag(event.creator.image)%>
-      </div>
-      <div class="panel-right pull-right">
-        <h3><%= event.title %></h3>
-      </div>
+    <div class="jumbotron">
+      <h2> <%= event.title %> </h2>
+      <h3> <%= event.address %> </h3>
+      <h4> Guests. <span> <%= event.num_people_attending %> / <%= event.max_people %> </span></h4><hr>
+      <p> <%= event.description %> </p>
+      <p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p>
     </div>
   </div>
 <% end %>
 </div>
 
-<div class="jumbotron">' +
-<h2> +locations[i][2]+ </h2> +
-<h3> +locations[i][6]+ </h3> +
-<h4> Guests. <span> +locations[i][5]+ / +locations[i][4]+ </span></h4><hr> +
-<p> +locations[i][3]+ </p> +
-<p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p> +
-</div>'
