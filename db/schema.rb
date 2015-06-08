@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150604175250) do
 
   create_table "events", force: :cascade do |t|
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "address"
     t.datetime "start_time"
     t.float    "lat"

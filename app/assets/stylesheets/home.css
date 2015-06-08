@@ -5,14 +5,12 @@
   margin-left: auto;
 }
 
-.jumbotron h3{
-  color: #bebebebe;
-}
-
-.jumbotron h4{
-  color: #bebebebe;
+.event_image{
+  height: auto;
+  width: auto;
 }
 
 .jumbotron h4 span{
   color: #bebebe;
 }
+
