@@ -12,6 +12,10 @@
   border-color: black;
 }
 
+.jumbotron h4 span{
+  color: #bebebe;
+}
+
 #create-event-button {
   margin-bottom: 20px;
 }
