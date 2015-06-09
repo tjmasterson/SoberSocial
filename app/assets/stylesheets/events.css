@@ -1,10 +1,15 @@
-.jumbotron{
-background:#fff;
-border-width: 1px;
-border-radius: 5px;
-padding: 10px;
-border-style: solid;
-border-color: black;
+.jumbotron {
+  background: #fff;
+  padding: 10px;
+}
+
+.jumbotron2 {
+  background:#fff;
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 10px;
+  border-style: solid;
+  border-color: black;
 }
 
 #create-event-button {
