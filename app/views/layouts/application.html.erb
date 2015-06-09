@@ -21,7 +21,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">BuzzFree</a>
+            <a class="navbar-brand" href="#">Buzz Free</a>
           </div>
 
           <div class="nav navbar-nav">
@@ -36,8 +36,17 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-3">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">List</a></li>
-              <li><a href="/users">Users</a></li>
+              <li><a href="#"></a></li>
+              <li><a href="/users"></a></li>
+
+              <!-- create button -->
+                <li>
+                  <div>
+                    <button type="button" class="btn btn-success center-block" id="create-event-button" data-toggle="modal" data-target="#event-form">Create Event</button>
+                  </div>
+                </li>
+              <!-- create button -->
+
               <% if user_signed_in?%>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= image_tag(current_user.image, class: "img-circle", alt: "maridlcrmn", width: "20") %> <%= current_user.name %></a>
@@ -51,6 +60,7 @@
                   <%= link_to "Login", user_omniauth_authorize_path(:facebook), class: "btn btn-default btn-outline btn-circle" %>
                 </li>
               <% end %>
+
             </ul>
           </div><!-- /.navbar-collapse -->
       </div><!-- /.container -->
@@ -67,21 +77,5 @@
 
   <%= yield %>
 </body>
-<div class="container-fluid">
- <nav class="navbar navbar-inverse">
-    <div class="container">
-        <div class="collapse navbar-collapse" id="navbar-collapse-3">
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Recovery</a></li>
-            <li><a href="/users">Health and Fitness</a></li>
-            <li><a href="/users">Careers</a></li>
-          </ul>
-
-        </div>
-    </div>
-  </nav>
-</div>
 </html>

@@ -18,10 +18,10 @@ $(document).ready(function(){
       mapTypeControl: false
     }
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    var marker = new google.maps.InfoWindow({
+    var marker = new google.maps.Marker({
       position: myLatlng,
       map: map,
-      content: "USER"
+      icon: "../images/user_icon.png"
     });
 
     var infowindow = new google.maps.InfoWindow();

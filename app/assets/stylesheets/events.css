@@ -16,8 +16,8 @@
   color: #bebebe;
 }
 
-#create-event-button {
-  margin-bottom: 20px;
+#create-event-button :hover{
+  color: red;
 }
 
 #create-event-button-div {
