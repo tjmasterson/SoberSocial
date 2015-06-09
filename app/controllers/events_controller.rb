@@ -10,6 +10,12 @@ class EventsController < ApplicationController
   end
 
   def create
+    if current_user.created_events.create(event_parmas)
+      redirect_to :root
+    else
+      puts "this did not work"
+      #some kind of notification
+    end
   end
 
   def update
@@ -17,5 +23,10 @@ class EventsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def event_parmas
+      params.require(:event).permit(:title, :description, :address, :start_time, :max_num_people)
+    end
 
 end
