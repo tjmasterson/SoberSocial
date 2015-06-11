@@ -20,6 +20,8 @@ gem 'thin'
 gem "font-awesome-rails"
 gem 'geokit-rails'
 
+gem 'pg_search'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'

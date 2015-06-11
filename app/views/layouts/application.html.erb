@@ -25,12 +25,12 @@
           </div>
 
           <div class="nav navbar-nav">
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search" />
-              <button type="submit" class="btn btn-danger"><span class="glyphicon glyphicon-search"></span></button>
-              </div>
-            </form>
+          <%= form_tag events_path, method: :get do %>
+            <p>
+              <%= text_field_tag :query, params[:query] %>
+              <%= submit_tag "Search", name: nil %>
+            </p>
+          <% end  %>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->

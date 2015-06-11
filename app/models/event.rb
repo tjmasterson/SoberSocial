@@ -6,4 +6,22 @@ class Event < ActiveRecord::Base
   has_many :event_guest_lists
   has_many :guests, through: :event_guest_lists, source: :user
 
+  include PgSearch
+  pg_search_scope :search, :against => [:title, :description, :address],
+    :using => {
+      :tsearch => {:prefix => true, :dictionary => "english"},
+      },
+    :associated_against => {:creator => :name, :category => :title}
+
+  def self.text_search(query)
+    if query.present?
+      search(query)
+    else
+      scoped
+    end
+  end
+
 end
+
+
+
