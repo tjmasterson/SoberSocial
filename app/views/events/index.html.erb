@@ -1,6 +1,10 @@
-<% @search_results.each do |event| %>
-  <strong><%= event.title %></strong>
-  <p>description: "<%= event.description %>"</p>
-  <p>location: <%= event.address %></p>
-  <hr><hr>
+<% if @search_results.length > 0 %>
+  <% @search_results.each do |event| %>
+    <strong><%= event.title %></strong>
+    <p>description: "<%= event.description %>"</p>
+    <p>location: <%= event.address %></p>
+    <hr><hr>
+  <% end %>
+<% else %>
+    <h2>Sorry. Your search returned no results.</h2>
 <% end %>

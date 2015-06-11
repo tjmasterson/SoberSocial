@@ -12,16 +12,16 @@ $(document).ready(function() {
     function buildMap(latitude, longitude, locations) {
         var myLatlng = new google.maps.LatLng(latitude, longitude);
         var mapOptions = {
-            zoom: 16,
+            zoom: 15,
             center: myLatlng,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControl: false
         }
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-        var marker = new google.maps.Marker({
+        var marker = new google.maps.InfoWindow({
             position: myLatlng,
             map: map,
-            icon: "../images/user_icon.png"
+            content: "You're here!"
         });
 
         var infowindow = new google.maps.InfoWindow();

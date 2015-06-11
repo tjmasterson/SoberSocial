@@ -1,58 +1,16 @@
 <div id="map-canvas" data-locations="<%= @locations %>" data-latitude="<%= @user_location.latitude %>" data-longitude="<%= @user_location.longitude %>">
 </div>
 
-<hr>
-<div class="row">
-  <div class="col-sm-3 pull-right">
-
-      <address id="address_dispensaries_index">
-        Buzz Free Social, Inc.<br>
-      <span id="map-input">
-        1212 Main Street<br>
-        Chicago, IL 60614</span><br>
-        P: (555) 555-5555
-      </address>
-
-      <address>
-        <strong>Email Us</strong><br>
-        <a href="mailto:#">first.last@example.com</a>
-      </address>
-    </div>
-
-    <div class="col-sm-8 col-sm-offset-1">
-
-      <div class="row form-group">
-        <div class="col-md-12">
-          <h1>Contact Us</h1>
-        </div>
-        <div class="col-xs-4">
-          <input type="text" class="form-control" id="firstName" name="name" placeholder="Your Name">
-        </div>
-        <div class="col-xs-6">
-          <input type="text" class="form-control" id="organization" name="organization" placeholder="Company or Organization">
-        </div>
-      </div>
-      <div class="row form-group">
-        <div class="col-xs-5">
-          <input type="text" class="form-control" name="email" placeholder="Email">
-        </div>
-        <div class="col-xs-5">
-          <input type="text" class="form-control" name="phone" placeholder="Phone">
-        </div>
-      </div>
-      <div class="row form-group">
-        <div class="col-xs-10">
-          <textarea class="form-control" placeholder="Comments"></textarea>
-        </div>
-      </div>
-      <div class="row form-group">
-        <div class="col-xs-10">
-          <button class="btn btn-default pull-right">Contact Us</button>
-        </div>
-      </div>
-
-    </div>
-
-  </div><!--/row-->
+<div id="list-canvas">
+  <% @events.each do |event| %>
+  <div class="jumbotron2">
+    <h2><%= event.title %></h2>
+    <h3><%= event.address %></h3>
+    <h4> Guests. <span><%= event.num_people_attending %> / <%= event.max_people %> </span></h4><hr>
+    <p><%= event.description %></p>
+    <p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p>
+  </div>
+  <% end %>
+</div>
 
 <%= render "events/form" %>

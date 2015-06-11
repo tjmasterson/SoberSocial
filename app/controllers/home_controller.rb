@@ -6,8 +6,8 @@ class HomeController < ApplicationController
     @events = Event.within(0.5, :origin => @user_location.ll)
     @locations = []
     @events.each do |event|
-      @locations << [event.lat, event.lng, event.title, event.description,
-                     event.max_people, event.num_people_attending, event.address]
+    @locations << [event.lat, event.lng, event.title, event.description,
+      event.max_people, event.num_people_attending, event.address]
     end
   end
 end
