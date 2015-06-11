@@ -1,8 +1,18 @@
 #map-canvas{
-  height: 40em;
-  width: 97%;
-  margin-right: auto;
-  margin-left: auto;
+  height: 45em;
+  width: 45%;
+  /*margin-right: 2em;*/
+  float: right;
+  position: absolute-fixed;
+  top: 0;
+  right: 2em;
+}
+
+#list-canvas {
+  height: 45em;
+  width: 45%;
+  margin-left: 2em;
+  float: left;
 }
 
 .event_image{
@@ -10,7 +20,18 @@
   width: auto;
 }
 
-.jumbotron h4 span{
-  color: #bebebe;
+.col-sm-3 {
+  padding-top: 5em;
+}
+
+.search_form{
+  padding-top: 0.75em;
+}
+
+#search_button{
+  background-color: rgba(104, 83, 151, 1);
+  color: white;
+  border: 0px;
+  margin-left: 1em;
 }
 

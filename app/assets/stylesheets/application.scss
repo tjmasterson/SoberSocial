@@ -14,7 +14,9 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import 'bootstrap-datetimepicker';
 @import "font-awesome";
 @import "home";
 @import "navbar";
 @import "events";
+@import "event_form";
