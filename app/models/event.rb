@@ -7,10 +7,12 @@ class Event < ActiveRecord::Base
   has_many :guests, through: :event_guest_lists, source: :user
 
   include PgSearch
-  pg_search_scope :search, :against => [:title, :description, :address],
+  pg_search_scope :search,
+    :against => {:title => 'A', :description => 'B', :address => 'C'},
     :using => {
-      :tsearch => {:prefix => true, :dictionary => "english"},
-      },
+      :tsearch => {prefix: true, dictionary: "english"},
+      :trigram => {threshold: 0.1}
+    },
     :associated_against => {:creator => :name, :category => :title}
 
   def self.text_search(query)
@@ -22,6 +24,3 @@ class Event < ActiveRecord::Base
   end
 
 end
-
-
-
