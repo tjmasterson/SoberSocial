@@ -10,8 +10,8 @@ class Event < ActiveRecord::Base
   pg_search_scope :search,
     :against => {:title => 'A', :description => 'B', :address => 'C'},
     :using => {
-      :tsearch => {prefix: true, dictionary: "english"},
-      :trigram => {threshold: 0.1}
+      :tsearch => {prefix: true, any_word: true, dictionary: "english"},
+      :trigram => {threshold: 1}
     },
     :associated_against => {:creator => :name, :category => :title}
 

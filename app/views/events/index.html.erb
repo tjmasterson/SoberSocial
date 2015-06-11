@@ -1,6 +1,6 @@
-<% @events.each do |event| %>
-<strong><%= event.title %></strong>
-<p>description: "<%= event.description %>"</p>
-<p>location: <%= event.address %></p>
-<hr><hr>
+<% @search_results.each do |event| %>
+  <strong><%= event.title %></strong>
+  <p>description: "<%= event.description %>"</p>
+  <p>location: <%= event.address %></p>
+  <hr><hr>
 <% end %>

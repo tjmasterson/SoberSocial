@@ -25,12 +25,14 @@
           </div>
 
           <div class="nav navbar-nav">
-          <%= form_tag events_path, method: :get do %>
-            <p>
-              <%= text_field_tag :query, params[:query] %>
-              <%= submit_tag "Search", name: nil %>
-            </p>
-          <% end  %>
+            <div class="searcher">
+            <%= form_tag events_path, method: :get do %>
+              <p>
+                <%= text_field_tag :query, params[:query] %>
+                <%= submit_tag "Search", name: nil %>
+              </p>
+            <% end  %>
+            </div>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
