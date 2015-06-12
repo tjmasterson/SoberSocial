@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
 
   def index
+    @search_results = Event.text_search(params[:query])
   end
 
   def show

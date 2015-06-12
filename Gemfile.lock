@@ -125,6 +125,10 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.18.2)
+    pg_search (1.0.3)
+      activerecord (>= 3.1)
+      activesupport (>= 3.1)
+      arel
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -210,6 +214,7 @@ DEPENDENCIES
   momentjs-rails (>= 2.8.1)
   omniauth-facebook
   pg
+  pg_search
   rails (= 4.2.1)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
