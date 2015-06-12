@@ -209,7 +209,7 @@ CREATE TABLE schema_migrations (
 CREATE TABLE users (
     id integer NOT NULL,
     name character varying,
-    image_url character varying,
+    image character varying,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL,
     email character varying DEFAULT ''::character varying NOT NULL,
