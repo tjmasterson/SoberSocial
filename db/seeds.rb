@@ -42,3 +42,8 @@ chase.created_events.create(title: "Bike Riding", description: "Lorem ipsum Dese
 mango.created_events.create(title: "Volleyball", description: "Lorem ipsum Ut est non aliquip consequat ut adipisicing dolore tempor ullamco ut mollit dolor non veniam velit eu cupidatat dolore.", address: "350 W Kinzie Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 3, num_people_attending: 2, category_id: 3)
 bill.created_events.create(title: "Gardening", description: "Lorem ipsum Dolore fugiat dolore culpa minim do ex nulla magna velit in aliquip laborum amet exercitation anim cillum voluptate.", address: "273 W Kinzie Chicago IL", start_time: Faker::Time.between(DateTime.now - 1, DateTime.now), max_people: 2, num_people_attending: 1, category_id: 7)
 
+
+
+
+
+

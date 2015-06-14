@@ -17,6 +17,7 @@ $(document).ready(function() {
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControl: false
         }
+
         var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
         var marker = new google.maps.InfoWindow({
             position: myLatlng,
@@ -46,5 +47,7 @@ $(document).ready(function() {
             })(marker, i));
         }
     } //buildMap
+
     google.maps.event.addDomListener(window, 'load', initialize);
+
 }) //$doc.ready
