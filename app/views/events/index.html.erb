@@ -4,11 +4,11 @@
 <div id="list-canvas">
   <% @events.each do |event| %>
   <div class="jumbotron2">
-    <h2><%= event.title %></h2>
-    <h3><%= event.address %></h3>
-    <h4> Guests. <span><%= event.num_people_attending %> / <%= event.max_people %> </span></h4><hr>
+    <h4><%= event.title %></h4>
+    <h5><%= event.address %></h5>
+    <h6> Guests. <span><%= event.num_people_attending %> / <%= event.max_people %> </span></h6><hr>
     <p><%= event.description %></p>
-    <p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p>
+    <p><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></p>
   </div>
   <% end %>
 </div>

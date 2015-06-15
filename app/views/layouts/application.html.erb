@@ -25,14 +25,7 @@
           </div>
 
           <div class="nav navbar-nav">
-            <!-- <div class="searcher"> -->
-            <%= form_tag events_path, method: :get, class: "search_form" do %>
-              <p>
-                <%= text_field_tag :query, params[:query] %>
-                <%= submit_tag "Search", name: nil, class: "btn btn-default", id: "search_button" %>
-              </p>
-            <% end  %>
-            <!-- </div> -->
+
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -40,6 +33,17 @@
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#"></a></li>
               <li><a href="/users"></a></li>
+
+              <li>
+                <div>
+                  <%= form_tag events_path, method: :get, class: "search_form" do %>
+                    <!-- <p> -->
+                      <%= text_field_tag :query, params[:query] %>
+                      <%= submit_tag "Search", name: nil, class: "btn btn-default", id: "search_button" %>
+                    <!-- </p> -->
+                  <% end  %>
+                </div>
+              </li>
 
               <!-- create button -->
                 <li>

@@ -36,11 +36,11 @@ $(document).ready(function() {
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                     infowindow.setContent('<div class="jumbotron">' +
-                        '<h2>' + locations[i][2] + '</h2>' +
-                        '<h3>' + locations[i][6] + '</h3>' +
-                        '<h4> Guests. <span>' + locations[i][5] + '/' + locations[i][4] + '</span></h4><hr>' +
-                        '<p>' + locations[i][3] + '</p>' +
-                        '<p><a class="btn btn-primary btn-lg" href="#" role="button">Join Event</a></p>' +
+                        '<h4>' + locations[i][2] + '</h4>' +
+                        '<h5>' + locations[i][6] + '</h5>' +
+                        '<h6> Guests. <span>' + locations[i][5] + '/' + locations[i][4] + '</span></h6><hr>' +
+                        '<h6>' + locations[i][3] + '</h6>' +
+                        '<h6><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></h6>' +
                         '</div>');
                     infowindow.open(map, marker);
                 }

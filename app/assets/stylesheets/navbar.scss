@@ -32,7 +32,10 @@
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 980px ) {
+    #map-canvas{ height: 0px; }
+    #list-canvas{ width: 95%; margin-left: auto; margin-right: auto; padding-left: 2em; }
+
     .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }
 
     .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
