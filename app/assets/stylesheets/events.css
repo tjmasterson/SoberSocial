@@ -1,6 +1,7 @@
 .jumbotron {
   background: #fff;
   padding: 10px;
+  border-bottom: 1px solid black;
 }
 
 .jumbotron2 {
@@ -9,12 +10,12 @@
   border-bottom: 1px solid black;
 }
 
-.jumbotron h4 span{
-  color: #bebebe;
+.jumbotron h6 span{
+  color: steelblue;
 }
 
-.jumbotron2 h4 span{
-  color: #bebebe;
+.jumbotron2 h6 span{
+  color: steelblue;
 }
 
 #create-event-button :hover{
