@@ -25,25 +25,17 @@
           </div>
 
           <div class="nav navbar-nav">
-
+            <%= form_tag events_path, method: :get, class: "search_form" do %>
+              <!-- <p> -->
+                <%= text_field_tag :query, params[:query], :placeholder => " search" %>
+              <!-- </p> -->
+            <% end  %>
           </div>
+
 
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-3">
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="#"></a></li>
-              <li><a href="/users"></a></li>
-
-              <li>
-                <div>
-                  <%= form_tag events_path, method: :get, class: "search_form" do %>
-                    <!-- <p> -->
-                      <%= text_field_tag :query, params[:query] %>
-                      <%= submit_tag "Search", name: nil, class: "btn btn-default", id: "search_button" %>
-                    <!-- </p> -->
-                  <% end  %>
-                </div>
-              </li>
 
               <!-- create button -->
                 <li>
