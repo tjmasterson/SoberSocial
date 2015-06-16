@@ -9,7 +9,10 @@ $(function(){
 
     var modal = $(this)
     modal.find('.show-event-title').text('Title: ' + event.title)
-
+    console.log(modal.find('#show-event-link'))
+    modal.find('#show-event-link').attr('href', '/events/' + event.id + '/join_event')
+    modal.find('#show-event-link').text('Join Events')
   })
 
 })
+
