@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   end
 
 
-   root 'home#index'
-   resources :events
+  root 'home#index'
+
+  resources :events do
+    get 'join_event', :on => :member
+  end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

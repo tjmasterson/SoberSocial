@@ -1,14 +1,17 @@
 #map-canvas{
   height: 45em;
   width: 45%;
+  z-index: -1;
   /*margin-right: 2em;*/
   float: right;
-  position: absolute-fixed;
+  position: fixed;
+  overflow-y: hidden;
   top: 0;
   right: 2em;
 }
 
 #list-canvas {
+  /*overflow-y: scroll;*/
   height: 45em;
   width: 45%;
   margin-left: 2em;

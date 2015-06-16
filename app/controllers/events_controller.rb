@@ -10,6 +10,16 @@ class EventsController < ApplicationController
   def new
   end
 
+  def join_event
+    @event = Event.find(params[:id])
+    if current_user.event_guest_lists.create(id: @event.id)
+      render :show
+    else
+      puts "this did not work"
+      redirect_to :root
+    end
+  end
+
   def create
     if current_user.created_events.create(event_parmas)
       redirect_to :root
@@ -29,5 +39,4 @@ class EventsController < ApplicationController
     def event_parmas
       params.require(:event).permit(:title, :description, :address, :start_time, :max_num_people)
     end
-
 end
