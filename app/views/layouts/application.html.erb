@@ -38,8 +38,7 @@
                 <div>
                   <%= form_tag events_path, method: :get, class: "search_form" do %>
                     <!-- <p> -->
-                      <%= text_field_tag :query, params[:query] %>
-                      <%= submit_tag "Search", name: nil, class: "btn btn-default", id: "search_button" %>
+                      <%= text_field_tag :query, params[:query], :placeholder => " search" %>
                     <!-- </p> -->
                   <% end  %>
                 </div>
