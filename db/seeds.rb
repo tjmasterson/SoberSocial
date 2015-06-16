@@ -1,7 +1,7 @@
-taylor = User.create(name: 'Taylor Masterson', image_url: "mangobowser1.jpg", email: "taylor@taylor.com", password: "password1")
-chase = User.create(name: 'Chase Nutile', image_url: "mangobill1.jpg", email: "chase@chase.com", password: "password1")
-mango = User.create(name: 'Mango Nutile', image_url: "mango1.jpg", email: "mango@mango.com", password: "password1")
-bill = User.create(name: 'Bill Nutile', image_url: "bill1.jpg", email: "bill@bill.com", password: "password1")
+taylor = User.create(name: 'Taylor Masterson', image: "mangobowser1.jpg", email: "taylor@taylor.com", password: "password1")
+chase = User.create(name: 'Chase Nutile', image: "mangobill1.jpg", email: "chase@chase.com", password: "password1")
+mango = User.create(name: 'Mango Nutile', image: "mango1.jpg", email: "mango@mango.com", password: "password1")
+bill = User.create(name: 'Bill Nutile', image: "bill1.jpg", email: "bill@bill.com", password: "password1")
 
 Category.create(title: "Fun")
 Category.create(title: "Adventure")

@@ -6,7 +6,7 @@
 }
 
 #list-canvas {
-  /*border: 1px solid #bebebe;*/
+  overflow-y: auto;
   height: 45em;
   width: 45%;
   margin-left: 2em;
