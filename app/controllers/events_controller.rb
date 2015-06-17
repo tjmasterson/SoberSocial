@@ -1,5 +1,4 @@
 class EventsController < ApplicationController
-  include EventsLocations
   include EventsByRadius
 
   def index
@@ -8,7 +7,7 @@ class EventsController < ApplicationController
     @user_location = Geokit::Geocoders::MultiGeocoder.geocode("184.154.83.119")#hardcoded ip address for development
     @events_search = Event.text_search(params[:query])
     @events = search_radius(@user_location) & @events_search
-    package_for_map(@events)
+    @locations = @events.to_json
   end
 
   def show
