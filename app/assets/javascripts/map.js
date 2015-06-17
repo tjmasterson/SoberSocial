@@ -27,8 +27,7 @@ $(document).ready(function() {
 
         var infowindow = new google.maps.InfoWindow();
         for (var i = 0; i < locations.length; i++) {
-            var eventObject = locations[i];
-            var position = new google.maps.LatLng(eventObject["lat"], eventObject["lng"]);
+            var position = new google.maps.LatLng(locations[i]["lat"], locations[i]["lng"]);
             var marker = new google.maps.Marker({
                 position: position,
                 map: map
@@ -38,10 +37,10 @@ $(document).ready(function() {
                 return function() {
                     infowindow.setContent('<div class="jumbotron">' +
                         // '<span id=glyphicon glyphicon-users></span>' +
-                        '<h4>' + eventObject["title"] + '</h4>' +
-                        '<h5>' + eventObject["address"] + '</h5>' +
-                        '<h6> Guests. <span>' + eventObject["num_people_attending"] + '/' + eventObject["max_people"] + '</span></h6><hr>' +
-                        '<h6>' + eventObject["description"] + '</h6>' +
+                        '<h4>' + locations[i]["title"] + '</h4>' +
+                        '<h5>' + locations[i]["address"] + '</h5>' +
+                        '<h6> Guests. <span>' + locations[i]["num_people_attending"] + '/' + locations[i]["max_people"] + '</span></h6><hr>' +
+                        '<h6>' + locations[i]["description"] + '</h6>' +
                         '<h6><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></h6>' +
                         '</div>');
                     infowindow.open(map, marker);
