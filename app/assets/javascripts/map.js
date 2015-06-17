@@ -37,6 +37,7 @@ $(document).ready(function() {
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                     infowindow.setContent('<div class="jumbotron">' +
+                        // '<span id=glyphicon glyphicon-users></span>' +
                         '<h4>' + eventObject["title"] + '</h4>' +
                         '<h5>' + eventObject["address"] + '</h5>' +
                         '<h6> Guests. <span>' + eventObject["num_people_attending"] + '/' + eventObject["max_people"] + '</span></h6><hr>' +
