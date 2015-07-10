@@ -130,6 +130,7 @@ CREATE TABLE events (
     description text,
     address character varying,
     start_time timestamp without time zone,
+    end_time timestamp without time zone,
     lat double precision,
     lng double precision,
     max_people integer,
