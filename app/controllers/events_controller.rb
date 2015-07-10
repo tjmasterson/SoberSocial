@@ -27,7 +27,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    if current_user.created_events.create(event_parmas)
+    if current_user.created_events.create(event_params)
       redirect_to :root
     else
       puts "this did not work"
@@ -42,7 +42,7 @@ class EventsController < ApplicationController
   end
 
   private
-    def event_parmas
-      params.require(:event).permit(:title, :description, :address, :start_time, :max_num_people)
+    def event_params
+      params.require(:event).permit(:title, :description, :address, :start_time, :end_time, :max_people)
     end
 end

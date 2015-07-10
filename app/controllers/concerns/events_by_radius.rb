@@ -10,6 +10,6 @@ module EventsByRadius
   end
 
   def search_radius(user_location)
-    Event.within(5, :origin => user_location.ll)
+    Event.within(25, :origin => user_location.ll)
   end
 end

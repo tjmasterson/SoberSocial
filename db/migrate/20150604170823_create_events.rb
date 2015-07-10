@@ -5,6 +5,7 @@ class CreateEvents < ActiveRecord::Migration
       t.text     :description
       t.string     :address
       t.datetime   :start_time
+      t.datetime   :end_time
       t.float      :lat
       t.float      :lng
       t.integer    :max_people
