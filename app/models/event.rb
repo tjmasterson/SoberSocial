@@ -1,5 +1,9 @@
 class Event < ActiveRecord::Base
+  require 'tod'
   acts_as_mappable :auto_geocode => {:field => :address}
+
+  serialize :start_time, Tod::TimeOfDay
+  serialize :end_time, Tod::TimeOfDay
 
   belongs_to :creator, class_name: "User", foreign_key: :user_id
   belongs_to :category

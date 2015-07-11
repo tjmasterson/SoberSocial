@@ -8,5 +8,5 @@ $(function(){
     $('.spinner input').val( parseInt($('.spinner input').val(), 10) - 1);
   });
 
-  $('#datetimepicker1').datetimepicker();
+  $('.datetimepicker1').datetimepicker();
 });
