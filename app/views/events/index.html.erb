@@ -4,7 +4,7 @@
 <div id="list-canvas">
   <% @events.each do |event| %>
   <div class="jumbotron2">
-    <h4><%= event.title %></h4>
+    <h4><%= event.title %> --> <span><%= event.date %></span></h4>
     <h5><%= event.address %></h5>
     <h6> Start Time: <span><%= event.start_time %></span> <h6>
     <h6> End Time: <span><%= event.end_time %></span> <h6>

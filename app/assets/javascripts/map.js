@@ -38,7 +38,6 @@ $(document).ready(function() {
                     var start = locations[i]["start_time"];
                     var end = locations[i]["end_time"];
 
-                    console.log(locations[i]["start_time"]);
                     infowindow.setContent('<div class="jumbotron">' +
                         '<h4>' + locations[i]["title"] + ' --> <span>' +locations[i]["date"]+ '</span></h4>' +
                         '<h5>' + locations[i]["address"] + '</h5>' +
