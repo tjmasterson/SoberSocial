@@ -1,5 +1,5 @@
 taylor = User.create(name: 'Taylor Masterson', image: "mangobowser1.jpg", email: "taylor@taylor.com", password: "password1")
-chase = User.create(name: 'Chase Nutile', image: "mangobill1.jpg", email: "chase@chase.com", password: "password1")
+chase = User.create(name: 'Chase Nutile', image: "mango3.jpg", email: "chase@chase.com", password: "password1")
 mango = User.create(name: 'Mango Nutile', image: "mango1.jpg", email: "mango@mango.com", password: "password1")
 bill = User.create(name: 'Bill Nutile', image: "bill1.jpg", email: "bill@bill.com", password: "password1")
 
