@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
-  require 'tod'
   acts_as_mappable :auto_geocode => {:field => :address}
 
+  require 'tod'
   serialize :start_time, Tod::TimeOfDay
   serialize :end_time, Tod::TimeOfDay
 
