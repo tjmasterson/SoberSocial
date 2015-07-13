@@ -18,8 +18,10 @@
                  <p>Description:</p>
                  <p><%= @event.description %></p>
                  <p><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></p>
-               <p><%= @event.guests.each do |guest| %>
-               <%= guest.name%>
+               <% if @event.guests.nil? == false %>
+               <% @event.guests.each do |guest| %>
+               <p><strong><%= guest.name %></strong><%= image_tag(guest.image, class: "img", alt: "maridlcrmn", width: "130", height: "130") %></p>
+               <% end %>
                <% end %>
 
                </div>
