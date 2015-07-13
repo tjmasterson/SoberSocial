@@ -1,3 +1,4 @@
+<div class = "list-canvas">
 <div class="jumbotron2">
   <div class='info-and-img'>
    <div id='creator_image'>
@@ -6,7 +7,7 @@
      <p>        <span><%= @event.creator.email %></span></p>
    </div>
    <div class='event_info'>
-     <h4><%= @event.title %></h4>
+     <h4><%= link_to @event.title, event_path(@event)%></h4>
      <h4><span><%= @event.date %></span></h4>
      <h5><%= @event.address %></h5>
      <h6> Start Time: <span><%= @event.start_time %></span> </h6>
