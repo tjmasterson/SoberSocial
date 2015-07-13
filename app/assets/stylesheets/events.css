@@ -31,6 +31,14 @@
   padding-bottom: 0.5em;
 }
 
+.thumbnail img {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #creator_image{
   float: right;
   margin-bottom: 1em;

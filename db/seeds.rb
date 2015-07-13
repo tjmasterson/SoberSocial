@@ -2,6 +2,7 @@ taylor = User.create(name: 'Taylor Masterson', image: "mangobowser1.jpg", email:
 chase = User.create(name: 'Chase Nutile', image: "mango3.jpg", email: "chase@chase.com", password: "password1")
 mango = User.create(name: 'Mango Nutile', image: "mango1.jpg", email: "mango@mango.com", password: "password1")
 bill = User.create(name: 'Bill Nutile', image: "bill1.jpg", email: "bill@bill.com", password: "password1")
+paul = User.create(name: 'Paul Clegg', image: "bill2.jpg", email: "paul@paul.com", password: "password1")
 
 Category.create(title: "Fun")
 Category.create(title: "Adventure")
@@ -18,6 +19,9 @@ event2 = chase.created_events.create(title: "Bowling", description: "Lorem ipsum
 chase.event_guest_lists.create(event: event1)
 mango.event_guest_lists.create(event: event1)
 bill.event_guest_lists.create(event: event1)
+paul.event_guest_lists.create(event: event1)
+taylor.event_guest_lists.create(event: event1)
+
 
 chase.event_guest_lists.create(event: event2)
 mango.event_guest_lists.create(event: event2)
