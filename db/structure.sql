@@ -135,7 +135,6 @@ CREATE TABLE events (
     lat double precision,
     lng double precision,
     max_people integer,
-    num_people_attending integer,
     user_id integer,
     category_id integer,
     created_at timestamp without time zone NOT NULL,

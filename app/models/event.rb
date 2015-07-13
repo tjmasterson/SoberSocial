@@ -31,4 +31,8 @@ class Event < ActiveRecord::Base
    date.strftime("%d/%m/%Y %I:%M %p")
   end
 
+  def num_people_attending
+    self.guests.count
+  end
+
 end
