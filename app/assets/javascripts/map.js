@@ -27,7 +27,7 @@ $(document).ready(function() {
 
         var infowindow = new google.maps.InfoWindow();
         for (var i = 0; i < locations.length; i++) {
-            var position = new google.maps.LatLng(locations[i][0], locations[i][1]);
+            var position = new google.maps.LatLng(locations[i]["lat"], locations[i]["lng"]);
             var marker = new google.maps.Marker({
                 position: position,
                 map: map
@@ -35,11 +35,16 @@ $(document).ready(function() {
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
+                    var start = locations[i]["start_time"];
+                    var end = locations[i]["end_time"];
+
                     infowindow.setContent('<div class="jumbotron">' +
-                        '<h4>' + locations[i][2] + '</h4>' +
-                        '<h5>' + locations[i][6] + '</h5>' +
-                        '<h6> Guests. <span>' + locations[i][5] + '/' + locations[i][4] + '</span></h6><hr>' +
-                        '<h6>' + locations[i][3] + '</h6>' +
+                        '<h4>' + locations[i]["title"] + ' --> <span>' +locations[i]["date"]+ '</span></h4>' +
+                        '<h5>' + locations[i]["address"] + '</h5>' +
+                        '<h6> Start Time: <span>' +start["hour"]+ ':' +start["minute"]+ ':' +start["second"]+ '</span><h6>' +
+                        // '<h6> End Time: <span>' +end["hour"]+ ':' +end["minute"]+ ':' +start["second"]+ '</span><h6>' +
+                        '<h6> Guests: <span>' + locations[i]["num_people_attending"] + '/' + locations[i]["max_people"] + '</span></h6><hr>' +
+                        '<h6>' + locations[i]["description"] + '</h6>' +
                         '<h6><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></h6>' +
                         '</div>');
                     infowindow.open(map, marker);

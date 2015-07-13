@@ -1,6 +1,7 @@
 .jumbotron {
   background: #fff;
   padding: 10px;
+  width: 32em;
   border-bottom: 1px solid black;
 }
 
@@ -18,11 +19,41 @@
   color: steelblue;
 }
 
-#create-event-button :hover{
-  color: red;
+.jumbotron h4 span{
+  color: firebrick;
 }
 
-#create-event-button-div {
-
+.jumbotron2 h4 span{
+  color: firebrick;
 }
+
+.info-and-img{
+  padding-bottom: 0.5em;
+}
+
+.thumbnail img {
+  display: block;
+  max-width: 100%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#creator_image{
+  float: right;
+  margin-bottom: 1em;
+}
+
+#creator_image p{
+  font-size: 0.7em;
+}
+
+#creator_image p span{
+  color: forestgreen;
+}
+
+@media screen and (max-width: 980px ) {
+  #creator_image { display: none; }
+}
+
 

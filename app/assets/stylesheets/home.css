@@ -6,10 +6,10 @@
 }
 
 #list-canvas {
+  overflow-y: auto;
   height: 45em;
   width: 45%;
   margin-left: 2em;
-  /*border: 1px solid #bebebe;*/
   float: left;
   overflow-y: scroll;
 }
@@ -24,6 +24,7 @@
 }
 
 .search_form{
+  padding-top: 0.8em;
   margin-right: 3em;
 }
 
@@ -31,7 +32,6 @@
   background-color: rgba(104, 83, 151, 1);
   color: white;
   border: 0px;
-  /*padding: 0.1em;*/
   margin-left: 1em;
 }
 
@@ -49,5 +49,6 @@
   color: #bebebe;
   margin-right: 2em;
 }
+
 
 

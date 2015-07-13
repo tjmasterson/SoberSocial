@@ -35,12 +35,14 @@
 @media screen and (max-width: 980px ) {
     #map-canvas{ height: 0px; }
     #footer{ height: 0px; }
-    #list-canvas{ width: 95%; margin-left: auto; margin-right: auto; padding-left: 2em; }
+    #list-canvas{ width: 95%; margin-left: auto; margin-right: auto; padding-left: 2em; overflow-y: none; }
+    #query{ width: 100%; margin-left: 1.5em; }
+    #create-event-button{ width: 95%; }
 
     .navbar .navbar-collapse .navbar-right > li:last-child { padding-left: 15px; padding-right: 15px; }
 
     .navbar .nav-collapse { margin: 7.5px auto; padding: 0; }
-    .navbar .nav-collapse .navbar-form { margin: 0; }
+    .navbar .nav-collapse .navbar-form { margin: 0;}
     .nav-collapse>li { float: none; }
 
     .navbar.navbar-default .nav-collapse,

@@ -6,7 +6,7 @@
         <h4 class="modal-title" id="myModalLabel">Create Event</h4>
       </div>
       <div class="modal-body">
-        <%= form_for :event, class: "form-horizontal" do |f| %>
+        <%= form_for @event, class: "form-horizontal" do |f| %>
           <!-- <fieldset> -->
           <!-- Form Name -->
           <legend>Users name might go here...</legend>
@@ -34,9 +34,9 @@
           </div>
 
           <div class="control-group">
-            <%= f.label :max_num_people, "Number of People", class: "control-label" %>
+            <%= f.label :max_people, "Number of People", class: "control-label" %>
             <div class="input-group spinner">
-              <%= f.text_field :max_num_people, value: 1, class: "form-control" %>
+              <%= f.text_field :max_people, value: 1, class: "form-control" %>
               <div class="input-group-btn-vertical">
                 <button class="btn btn-default" type="button"><i class="fa fa-caret-up"></i></button>
                 <button class="btn btn-default" type="button"><i class="fa fa-caret-down"></i></button>
@@ -46,8 +46,17 @@
 
           <div class="control-group">
             <%= f.label :start_time, "Event Start Time", class: "control-label" %>
-          <div class='input-group date' id='datetimepicker1'>
+          <div class="input-group date datetimepicker1">
             <%= f.text_field :start_time, class: "form-control" %>
+            <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+            </span>
+          </div>
+
+          <div class="control-group">
+            <%= f.label :end_time, "Event End Time", class: "control-label" %>
+          <div class= "input-group date datetimepicker1">
+            <%= f.text_field :end_time, class: "form-control" %>
             <span class="input-group-addon">
               <span class="glyphicon glyphicon-calendar"></span>
             </span>

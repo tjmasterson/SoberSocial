@@ -1,0 +1,60 @@
+<div class = "list-canvas">
+<div class="jumbotron2">
+  <div class='info-and-img'>
+   <div id='creator_image'>
+     <%= image_tag(@event.creator.image, class: "img", alt: "maridlcrmn", width: "130", height: "130") %>
+     <p>Creator: <span><%= @event.creator.name %></span></p>
+     <p>        <span><%= @event.creator.email %></span></p>
+   </div>
+   <div class='event_info'>
+     <h4><%= link_to @event.title, event_path(@event)%></h4>
+     <h4><span><%= @event.date %></span></h4>
+     <h5><%= @event.address %></h5>
+     <h6> Start Time: <span><%= @event.start_time %></span> </h6>
+     <h6> End Time: <span><%= @event.end_time %></span> </h6>
+     <h6> Guests. <span><%= @event.num_people_attending %> / <%= @event.max_people %> </span></h6>
+   </div>
+ </div>
+ <hr>
+ <div class='jumbotron-footer'>
+   <h4>Description:</h4>
+   <p><%= @event.description %></p>
+   <p><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></p>
+   <% if @event.guests.nil? == false %>
+   <h4>Guest List</h4>
+   <% @event.guests.each_slice(3) do |guests| %>
+   <div class="row">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(guests.first.image, class: "img", alt: "maridlcrmn", width: "200px", height: "200px") %>
+        <div class="caption">
+          <h3><%=guests.first.name%></h3>
+        </div>
+      </div>
+    </div>
+    <% if guests.length > 1 %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(guests.second.image, class: "img", alt: "maridlcrmn", width: "200px", height: "200px") %>
+        <div class="caption">
+          <h3><%=guests.second.name%></h3>
+        </div>
+      </div>
+    </div>
+    <% if guests.length > 2 %>
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <%= image_tag(guests.last.image, class: "img", alt: "maridlcrmn", width: "200px", height: "200px") %>
+        <div class="caption">
+          <h3><%=guests.last.name%></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+  <% end %>
+  <% end %>
+  <% end %>
+
+</div>
+</div>
