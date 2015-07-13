@@ -7,6 +7,12 @@
     <h4><%= event.title %></h4>
     <h5><%= event.address %></h5>
     <h6> Guests. <span><%= event.num_people_attending %> / <%= event.max_people %> </span></h6><hr>
+    <% if event.start_time != nil %>
+    <p><%= event.start_time.date_format %></p>
+    <% end %>
+    <% if event.end_time != nil%>
+    <p><%= event.end_time.date_format%></p>
+    <% end %>
     <p><%= event.description %></p>
     <p><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></p>
   </div>

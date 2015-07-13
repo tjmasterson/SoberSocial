@@ -23,4 +23,8 @@ class Event < ActiveRecord::Base
     end
   end
 
+  def date_format(date)
+   date.strftime("%d/%m/%Y %I:%M %p")
+  end
+
 end
