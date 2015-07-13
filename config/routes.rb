@@ -14,6 +14,7 @@ Rails.application.routes.draw do
 
   resources :events do
     get 'join_event', :on => :member
+    get 'events/search', to: 'photos#search'
   end
 
   # Example of regular route:

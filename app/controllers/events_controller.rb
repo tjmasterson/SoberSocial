@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
   include EventsByRadius
 
-  def index
+  def search
     @event = Event.new
     ip = request.remote_ip
     @user_location = Geokit::Geocoders::MultiGeocoder.geocode("184.154.83.119")#hardcoded ip address for development
