@@ -35,11 +35,15 @@ $(document).ready(function() {
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
+                    var start = locations[i]["start_time"];
+                    var end = locations[i]["end_time"];
+
                     infowindow.setContent('<div class="jumbotron">' +
-                        // '<span id=glyphicon glyphicon-users></span>' +
-                        '<h4>' + locations[i]["title"] + '</h4>' +
+                        '<h4>' + locations[i]["title"] + ' --> <span>' +locations[i]["date"]+ '</span></h4>' +
                         '<h5>' + locations[i]["address"] + '</h5>' +
-                        '<h6> Guests. <span>' + locations[i]["num_people_attending"] + '/' + locations[i]["max_people"] + '</span></h6><hr>' +
+                        '<h6> Start Time: <span>' +start["hour"]+ ':' +start["minute"]+ ':' +start["second"]+ '</span><h6>' +
+                        // '<h6> End Time: <span>' +end["hour"]+ ':' +end["minute"]+ ':' +start["second"]+ '</span><h6>' +
+                        '<h6> Guests: <span>' + locations[i]["num_people_attending"] + '/' + locations[i]["max_people"] + '</span></h6><hr>' +
                         '<h6>' + locations[i]["description"] + '</h6>' +
                         '<h6><a class="btn btn-primary btn-sm" href="#" role="button">Join Event</a></h6>' +
                         '</div>');

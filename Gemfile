@@ -21,6 +21,7 @@ gem "font-awesome-rails"
 gem 'geokit-rails'
 
 gem 'pg_search'
+gem 'tod'
 
 group :development, :test do
   gem 'byebug'

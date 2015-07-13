@@ -19,4 +19,33 @@
   color: steelblue;
 }
 
+.jumbotron h4 span{
+  color: firebrick;
+}
+
+.jumbotron2 h4 span{
+  color: firebrick;
+}
+
+.info-and-img{
+  padding-bottom: 0.5em;
+}
+
+#creator_image{
+  float: right;
+  margin-bottom: 1em;
+}
+
+#creator_image p{
+  font-size: 0.7em;
+}
+
+#creator_image p span{
+  color: forestgreen;
+}
+
+@media screen and (max-width: 980px ) {
+  #creator_image { display: none; }
+}
+
 

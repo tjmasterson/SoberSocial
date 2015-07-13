@@ -36,9 +36,10 @@
           <!-- Collect the nav links, forms, and other content for toggling -->
           <div class="collapse navbar-collapse" id="navbar-collapse-3">
             <ul class="nav navbar-nav navbar-right">
+
               <% if user_signed_in?%>
                 <li class="dropdown">
-                <%= current_user.name %></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><%= image_tag(current_user.image, class: "img-circle", alt: "maridlcrmn", width: "20") %> <%= current_user.name %></a>
                   </a>
                 </li>
                 <li>
@@ -49,6 +50,7 @@
                   <%= link_to "Login", user_omniauth_authorize_path(:facebook), class: "btn btn-default btn-outline btn-circle" %>
                 </li>
               <% end %>
+
 
               <!-- create button -->
                 <li>
